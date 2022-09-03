@@ -1,0 +1,1 @@
+{"name":"Local: 55","url":"e:\\LDat\\dev\\DSA\\Dynamic Programming\\55. Jump Game.cpp","tests":[{"id":1658994552159,"input":"5 2 3 1 1 4","output":"1"},{"id":1658994560815,"input":"5\n3 2 1 0 4","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\DSA\\Dynamic Programming\\55. Jump Game.cpp","group":"local","local":true}
