@@ -5,8 +5,9 @@
 #include <chrono>
 #include <vector>
 #include <map>
+#include <utility>
 
-
+#define logm(mess) std::cout << mess;
 #define log1(a) std::cout << #a << " = " << a << "\n";
 #define log2(a, b) std::cout << #a << " = " << a << " " \
                              << #b << " = " << b << "\n";
@@ -17,9 +18,14 @@
                              << #b << " = " << b << " " \
                              << #c << " = " << c << " " \
                              << #d << " = " << d << "\n";
+#define log5(a, b, c, d, e) std::cout << #a << " = " << a << " " \
+                             << #b << " = " << b << " " \
+                             << #c << " = " << c << " " \
+                             << #d << " = " << d << " " \
+                             << #e << " = " << e << "\n";
 
-#define GET_MACRO(_1,_2,_3,_4,NAME,...) NAME
-#define log(...) GET_MACRO(__VA_ARGS__, log4, log3, log2, log1)(__VA_ARGS__)
+#define GET_MACRO(_1,_2,_3,_4,_5,NAME,...) NAME
+#define log(...) GET_MACRO(__VA_ARGS__, log5, log4, log3, log2, log1)(__VA_ARGS__)
 
 struct Timer
 {
@@ -54,6 +60,7 @@ std::ostream &operator<<(std::ostream &os, const std::set<T> &s)
     os << "}\t";
     return os;
 }
+
 // Print vector with cout
 template<typename T>
 std::ostream &operator<<(std::ostream &os, const std::vector<T> &v)
@@ -61,7 +68,7 @@ std::ostream &operator<<(std::ostream &os, const std::vector<T> &v)
     os << "{ ";
     for (auto &i : v) 
         os << i << " ";
-    os << "}\t";
+    os << "}\n";
     return os;
 }
 // Print 2D vector with cout
