@@ -22,11 +22,15 @@ int main()
     int n;
     std::cin >> n;
 
-    if (n >= 2) std::cout << 2;
-
-    for (int i = 3; n; i += 2) {
-        if (isPrime(i)) std::cout << i;
+    if (n >= 1) {
         n--;
+        std::cout << 2;
+    }
+    for (int i = 3; n; i += 2) {
+        if (isPrime(i)) {
+            std::cout << i;
+            n--;
+        }
     }
     return 0;
 }
