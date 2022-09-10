@@ -24,11 +24,11 @@ int main()
     unsigned long long sum = 0;
     std::cin >> n;
 
-    if (n >= 2) {
+    if (n > 2) {
         std::cout << 2 << " ";
         sum += 2;
     }
-    for (int i = 3; i <= n; i += 2) {
+    for (int i = 3; i < n; i += 2) {
         if (isPrime(i)) {
             std::cout << i << " ";
             sum += i;
