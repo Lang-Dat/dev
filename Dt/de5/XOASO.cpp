@@ -18,7 +18,7 @@ int main()
     }
 
     if (sum % 2 == 0)
-        std::cout << (even * (even+1) / 2) + (odd * (odd+1) / 2);
+        std::cout << (even * (even-1) / 2) + (odd * (odd-1) / 2);
     else 
         std::cout << even * odd; 
     return 0;
