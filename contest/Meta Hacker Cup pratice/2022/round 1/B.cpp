@@ -20,11 +20,12 @@ void solve() {
         sum_b = (sum_b + b);
         sum_square = (sum_square + a*a + b*b);
     }
+    // log(sum_square);
     cin >> q;
     // big res = (sum_square * q);
     for (int i = 0; i < q; i++) {
         cin >> x >> y;
-        res = (res + sum_square - 2*x*sum_a + n*(x*x + y*y) - 2*y*sum_b) % MOD;
+        res = (res + sum_square - 2LL*x*sum_a + n*(x*x + y*y) - 2LL*y*sum_b) % MOD;
         // log(res, i);
     }
     cout << res << "\n";    
@@ -52,7 +53,7 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    freopen("./in/watering_well_chapter_2_input.txt", "r", stdin);
+    freopen("./Round 1/watering_well_ch2_input.txt", "r", stdin);
     freopen("./in/in.out", "w", stdout);
 
     int T;

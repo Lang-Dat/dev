@@ -33,7 +33,7 @@ int main()
     freopen("./in/consecutive_cuts_chapter_1_input.txt", "r", stdin);
     // freopen("./in/in.inp", "r", stdin);
     freopen("./in/in.out", "w", stdout);
-
+    
     int T;
     std::cin >> T;
 

@@ -1,6 +1,5 @@
 #pragma GCC optimize("O2")
 #include <iostream>
-
 const int LIM = 500005;
 int A[LIM], B[2*LIM], LPS[LIM];
 int n, k, tmp;
@@ -45,6 +44,7 @@ bool KMP() {
     }
     return false;
 }
+
 
 void solve() {
     std::cin >> n >> k;
