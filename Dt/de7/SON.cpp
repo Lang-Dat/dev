@@ -26,6 +26,10 @@ int main()
     freopen("SON.OUT", "w", stdout);
 
     std::cin >> n >> m;
+    if (m == 0) {
+        std::cout << 0;
+        return;
+    }
     buildSubset();
     for (auto v : subset) {
         std::sort(v.begin(), v.end());

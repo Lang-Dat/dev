@@ -1,6 +1,7 @@
 #pragma GCC optimize("O2")
 #include <iostream>
-#include <set>
+#include <vector>
+#include <algorithm>
 
 int main()
 {
@@ -10,12 +11,15 @@ int main()
     freopen("Nhansu.OUT", "w", stdout);
 
     int n, tmp;
-    std::set<int> s;
+    std::vector<int> nums;
     std::cin >> n;
-    while(std::cin >> tmp)
-        s.insert(tmp);
-
-    for (auto &nhansu : s)
-        std::cout << nhansu << " "; 
+    while(std::cin >> tmp) {
+        for (int i : nums)
+            if (i == tmp) goto cnt;
+        nums.push_back(tmp);
+        cnt:;
+    }
+    for (int i : nums)
+        std::cout << i << " ";
     return 0;
 }

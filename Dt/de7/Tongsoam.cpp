@@ -8,17 +8,14 @@ int main()
     freopen("Tongsoam.INP", "r", stdin);
     freopen("Tongsoam.OUT", "w", stdout);
 
-    int n, max = INT32_MIN, tmp;
-    std::cin >> n;
-    while(n--) {
-        std::cin >> tmp;
-        // log(tmp, max);
-        if (tmp < 0 && tmp > max)
-            max = tmp;
+    int n, tmp, sum = 0;
+    while (std::cin >> tmp)
+    {
+        if (tmp < 0)
+            sum += tmp;    
     }
-    if (max == INT32_MIN)
-        std::cout << 0;
-    else
-        std::cout << max;
+
+    std::cout << sum;
+    
     return 0;
 }   
