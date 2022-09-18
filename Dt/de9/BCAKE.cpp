@@ -1,11 +1,12 @@
 #pragma GCC optimize("O2")
-#include <math.h>
-#include <iostream>
 #include <stdio.h>
-#include <set>
+#include <iostream>
+#include <map>
+
+#define M_PI 3.14159265358979323846
 
 int main()
-{
+{   
     std::ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
     freopen("./BCAKE.INP", "r", stdin);
@@ -19,18 +20,16 @@ int main()
         std::cin >> r >> h;
         theTich[i] = r*r*h*M_PI;
     }
-
-    double dp[n]; // The tich lon nhat neu chon cai do
-    // dp[n - 1] = theTich[n - 1];
+    std::map<long double, int, std::greater<>> dp;
     for (int i = n - 1; i >= 0; i--) {
-        dp[i] = theTich[i];
-        double currMax = 0;
-        for (int j = i + 1; j < n; j++) {
-            if (theTich[j] > theTich[i] && dp[j] > currMax)
-                currMax = dp[j];
-        }
-        dp[i] += currMax;
+        long double currMax = 0;
+        for (auto &itr : dp)
+            if (theTich[itr.second] > theTich[i] && itr.first > currMax)
+                currMax = itr.first;
+        if (dp.count(currMax + theTich[i]) && theTich[dp[currMax + theTich[i]]] < theTich[i]) dp[currMax + theTich[i]] = i;
+        else dp[currMax + theTich[i]] = i;
     }
-    printf("%.3f", dp[0]);
+    double ans = dp.begin()->first;
+    printf("%.3f", ans);
     return 0;
 }
