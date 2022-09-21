@@ -3,6 +3,29 @@
 #include <algorithm>
 #include <cstring>
 
+bool isPermutation(std::string tmp) {
+    std::sort(tmp.begin(), tmp.end());
+    for (int t = 0; t < tmp.size() - 1; t++) {
+        if ((int)tmp[t] != (int)tmp[t+1] - 1)
+            return false;
+    }
+    return true;
+}
+
+int lengthOfLongestSubstring(string s) {
+    int len = 0, left = 0;
+    vector<int> freq(256, -1);
+
+    for (int right = 0; right < s.size(); right++)
+    {
+        if (freq[s[right] != -1])
+            left = max(left, freq[s[right]] + 1);
+        freq[s[right]] = right;
+            len = max(len, right - left + 1); 
+    }
+    return len;
+}
+
 int main()
 {
     std::ios::sync_with_stdio(false);
@@ -17,11 +40,6 @@ int main()
         for (int j = i; j < str.size(); j++) {
             substr += str[j];
             tmp = substr;
-            std::sort(tmp.begin(), tmp.end());
-            for (int t = 0; t < tmp.size() - 1; t++) {
-                if ((int)tmp[t] != (int)tmp[t+1] - 1)
-                    goto cnt;
-            }
             if (substr.size() > max.size())
                 max = substr;
             cnt:;
