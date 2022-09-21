@@ -8,7 +8,7 @@ int main()
     freopen("./TONGCHAN.INP", "r", stdin);
     freopen("./TONGCHAN.OUT", "w", stdout);
 
-    int n, tmp, chan = 0, le = 0, sum = 0;
+    long long n, tmp, chan = 0, le = 0, sum = 0;
     std::cin >> n;
     while(std::cin >> tmp) {
         (tmp % 2 == 0) ? chan++ : le++;

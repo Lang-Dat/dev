@@ -33,17 +33,20 @@ int main()
 
     std::sort(primes.begin(), primes.end(), std::greater<int>());
     std::deque<int> res;
-    bool benTrai = false;
-    
-    for (int i : primes) {
-        if (benTrai) {
-            res.push_front(i);
-            benTrai = false;
-        }
-        else {
-            res.push_back(i);
-            benTrai = true;
-        }
+    // bool benTrai = false;
+    // for (int i : primes) {
+    //     if (benTrai) {
+    //         res.push_front(i);
+    //         benTrai = false;
+    //     }
+    //     else {
+    //         res.push_back(i);
+    //         benTrai = true;
+    //     }
+    // }
+    for (int i = 0; i < primes.size(); i++) {
+        if (i % 2 == 0) res.push_back(primes[i]);
+        else res.push_front(primes[i]);
     }
     for (int i : res) 
         std::cout << i << " ";
