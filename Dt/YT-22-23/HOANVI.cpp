@@ -2,6 +2,7 @@
 #include <iostream>
 #include <algorithm>
 #include <cstring>
+#include <unordered_set>
 
 bool isPermutation(std::string tmp) {
     std::sort(tmp.begin(), tmp.end());
@@ -10,20 +11,6 @@ bool isPermutation(std::string tmp) {
             return false;
     }
     return true;
-}
-
-int lengthOfLongestSubstring(string s) {
-    int len = 0, left = 0;
-    vector<int> freq(256, -1);
-
-    for (int right = 0; right < s.size(); right++)
-    {
-        if (freq[s[right] != -1])
-            left = max(left, freq[s[right]] + 1);
-        freq[s[right]] = right;
-            len = max(len, right - left + 1); 
-    }
-    return len;
 }
 
 int main()
@@ -37,12 +24,13 @@ int main()
     std::cin >> str;
     for (int i = 0; i < str.size(); i++) {
         substr = "";
+        std::unordered_set<char> s;
         for (int j = i; j < str.size(); j++) {
+            if (s.count(str[j])) break;
+            s.insert(str[j]);
             substr += str[j];
-            tmp = substr;
-            if (substr.size() > max.size())
+            if (substr.size() > max.size() && isPermutation(substr)) 
                 max = substr;
-            cnt:;
         }
     }
     std::cout << max;

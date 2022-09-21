@@ -2,6 +2,7 @@
 #include <math.h>
 #include <iostream>
 
+using std::pow;
 #define ull unsigned long long
 
 int main()
@@ -14,9 +15,6 @@ int main()
     ull a, n, d, S = 1;
     std:: cin >> a >> n >> d;
 
-    for (int i = 1; i <= n; i++) {
-        S += std::pow(a, i*d);
-    }
-    std::cout << S;
+    std::cout << (ull)(pow(a, (n+1)*d)-1) / (ull)(pow(a, d) - 1);
     return 0;
 }
