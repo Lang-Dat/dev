@@ -16,7 +16,7 @@ int main()
         std::cout << 1;
         return 0;
     }
-    // std::cout << b/x - a/x + b/y - a/y - (b/bcnn - a/bcnn);
+    a--;
     std::cout << b/x - a/x + b/y - a/y - (b/bcnn - a/bcnn);
     
     return 0;

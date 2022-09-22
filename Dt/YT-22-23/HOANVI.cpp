@@ -25,6 +25,10 @@ int main()
     for (int i = 0; i < str.size(); i++) {
         substr = "";
         std::unordered_set<char> s;
+        if (max.size() == 27) {
+            std::cout << max;
+            return 0;
+        }
         for (int j = i; j < str.size(); j++) {
             if (s.count(str[j])) break;
             s.insert(str[j]);
