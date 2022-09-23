@@ -1,7 +1,7 @@
 #pragma GCC optimize("O2")
 #include <iostream>
 #include <algorithm>
-const int LIM = 1e6;
+const int LIM = 1e6 + 5;
 int freq[LIM + 1];
 
 int main()
