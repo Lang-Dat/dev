@@ -2,7 +2,7 @@
 #include <iostream>
 #include <unordered_map>
 
-std::map<int, int> freq;
+std::unordered_map<int, int> freq;
 
 int main()
 {
