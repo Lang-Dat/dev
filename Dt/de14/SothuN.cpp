@@ -14,16 +14,16 @@ void find(int n) {
         numOfDigit++;
     }
     // su dung float de tranh bug trong ham pow (vi du: (int)pow(10, 2) = 99 :)))
-    float soCuoi = (int)(n / numOfDigit);
+    int soCuoi = (int)(n / numOfDigit);
+
     n -= soCuoi*numOfDigit;
     
     if (n < numOfDigit && n != 0) soCuoi++;
     
-    soCuoi += std::pow(10, numOfDigit-1) - 1;
+    soCuoi += std::pow(10, numOfDigit-1) + 0.1f - 1;
     
-    if (soCuoi == std::pow(10, numOfDigit))
+    if (soCuoi == std::pow(10, numOfDigit) + 0.1f)
         numOfDigit++;
-
     if (n != 0)
         soCuoi /= std::pow(10, numOfDigit-n);
     std::cout << (int)soCuoi % 10 << "\n";
