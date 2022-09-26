@@ -1,0 +1,3 @@
+{
+    "c-cpp-compile-run.cpp-flags": "-Wall -Wextra -std=c++14 -O2"
+}
