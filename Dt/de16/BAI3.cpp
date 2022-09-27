@@ -17,13 +17,13 @@ int main()
     k = k * 2 + 1;
     while (std::cin >> c >> x)
         nums[x] += c;
-            for (int i = 1; i < LIM; i++)
-                nums[i] += nums[i - 1];
-
     for (int i = 1; i < LIM; i++)
-        if (i + k < LIM && nums[i + k] - nums[i-1] > max)
+        nums[i] += nums[i - 1];
+    for (int i = 1; i + k < LIM; i++)
+        if (nums[i + k] - nums[i-1] > max)
             max = nums[i + k] - nums[i-1];
-    max = std::max(max, nums[LIM - 1] - nums[LIM - k - 1]);
+    if (k >= LIM) max = nums[LIM-1];
+    else max = std::max(max, nums[LIM - 1] - nums[LIM - k - 1]);
     std::cout << max;
     return 0;
 }
