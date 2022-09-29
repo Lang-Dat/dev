@@ -1,0 +1,10 @@
+100 AAAAA AAAAA AAAAAAAAAAAAAAA A B AB
+F1 = A                       0
+F2 = B                       0
+F3 = B A;                    0
+F4 = BA B;                   1
+F5 = BAB BA                  1
+F6 = BABBA BAB               3
+
+F7 = BABBABAB BABBA          4
+F8 = BABBABABBABBA BABBABAB  8
