@@ -22,7 +22,7 @@ int main()
         return 0;
     }
 
-    for (int i = 2; i < 10; i++)
+    for (int i = 9; i > 1 ; i--)
         while(m % i == 0) {
             freq[i]++;
             m /= i;
@@ -31,17 +31,9 @@ int main()
         std::cout << -1 << "";
         return 0;
     }
-    freq[8] = freq[2] / 3;
-    freq[2] %= 3;
-    freq[9] = freq[3] / 2;
-    freq[3] %= 2;
-    int tmp = std::min(freq[2], freq[3]);
-    freq[6] += tmp;
-    freq[2] -= tmp;
-    freq[3] -= tmp;
-
+    
     for (int i = 2; i < 10; i++)
-        if (freq[i] > 0)
+        for (int j = 0; j < freq[i]; j++)
             std::cout << i << "";
     return 0;
 }
