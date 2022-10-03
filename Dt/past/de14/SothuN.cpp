@@ -14,7 +14,7 @@ void find(int n) {
         numOfDigit++;
     }
     // su dung float de tranh bug trong ham pow (vi du: (int)pow(10, 2) = 99 :)))
-    int soCuoi = (int)(n / numOfDigit);
+    float soCuoi = (int)(n / numOfDigit);
 
     n -= soCuoi*numOfDigit;
     
