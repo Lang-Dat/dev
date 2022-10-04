@@ -17,6 +17,7 @@ int main()
     int tui3 = (n-tui5*5) / 3;
     int remind = n - tui3*3 - tui5*5;
     if (remind == 1 && tui5 > 0) tui3++;
+    else if (remind == 2 && tui5 >= 2) tui3 += 4 - 2;
     else if (remind != 0) {
         std::cout << -1;
         return 0;
