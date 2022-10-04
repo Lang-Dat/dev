@@ -4,9 +4,9 @@
 #define ull unsigned long long
 
 bool tongChuSo(ull n) {
-    int sum = 0, product = 1;
+    short sum = 0, product = 1;
     while(n > 0 && product != 0) {
-        int last = n % 10;
+        short last = n % 10;
         sum += last;
         product = product * last;
         n /= 10;
@@ -18,14 +18,13 @@ int main()
 {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
-    // freopen("./pds.INP", "r", stdin);
-    // freopen("./pds.OUT", "w", stdout);
-
-    int n, count = 0;
-    ull i = 1;
+    freopen("./pds.INP", "r", stdin);
+    freopen("./pds.OUT", "w", stdout);
+    
+    int n;
+    ull i = 0;
     std::cin >> n;
-    for (; count < n; i++)
-        count += (tongChuSo(i));
-    std::cout << i - 1;
+    for (int count = 0; count < n; i++, count += (tongChuSo(i))) {}
+    std::cout << i << "\n";
     return 0;
 }
