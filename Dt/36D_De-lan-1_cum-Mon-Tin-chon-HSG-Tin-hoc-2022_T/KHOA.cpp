@@ -24,9 +24,13 @@ int main()
     str += str;
     for (start = 0, end = str.size() / 2; start < str.size() / 2; start++, end++)
         if (isPalindrome()) ans.push_back(start);
+    if (ans.empty()) {
+        std::cout << -1;
+        return 0;
+    }
     std::cout << ans.size() << "\n";
     for (int i : ans)
-        if (i == 0) std::cout << 1 << " " << str.size() / 2 << "\n";
+        if (i == 0) std::cout << str.size() / 2<< " " << 1 << "\n";
         else std::cout << i << " " << i + 1 << "\n";
     return 0;
 }

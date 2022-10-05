@@ -40,8 +40,8 @@ int main()
         while (R != n) {
             count++;
             L = R + 1;
-            R = std::lower_bound(nums.begin() + L + 1, nums.end(), uoc + nums[L-1]) - nums.begin();      
-            if (R == nums.end() - nums.begin()) break;
+            R = std::lower_bound(nums.begin() + L, nums.end(), uoc + nums[L-1]) - nums.begin();      
+            if (nums[R] != nums[L-1] + uoc) break;
             currBestans.push_back({L, R});
             if (R == n && currBestans.size() > ans.size()) {
                 ans = currBestans;
@@ -49,6 +49,8 @@ int main()
             }
         }
     }
+    // for (int i = 1; i < nums.size(); i++)
+    //     std::cout << i << ": " << nums[i] << "\t";
     std::cout << ans.size() << " " << nums[ans[0][1]] - nums[ans[0][0] - 1] << "\n";
     for (int i = 0; i < ans.size(); i++) {
         for (int L = ans[i][0]; L <= ans[i][1]; L++)
