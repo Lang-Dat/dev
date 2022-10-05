@@ -4,7 +4,7 @@
 
 #define ull unsigned long long
 
-const int LIM = 1e6 + 2;
+const int LIM = 1e6 + 5;
 ull nums[LIM];
 
 int main()
@@ -23,9 +23,8 @@ int main()
     }
     for (int i = 1; i < LIM; i++)
         nums[i] += nums[i-1];
-
     for (int i = 1; i + k < LIM; i++)
-        best = std::max(best, nums[i + k] - nums[i-1]);
+            best = std::max(best, nums[i + k - 1] - nums[i - 1]);
     if (k >= LIM) best = std::max(best, nums[LIM-1]);
     std::cout << best;
     return 0;
