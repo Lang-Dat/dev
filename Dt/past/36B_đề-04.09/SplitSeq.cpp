@@ -25,8 +25,8 @@ int main()
 {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
-    freopen("./SplitSeq.INP", "r", stdin);
-    freopen("./SplitSeq.OUT", "w", stdout);
+    freopen("./Test/SplitSeq/test01/SplitSeq.INP", "r", stdin);
+    // freopen("./SplitSeq.OUT", "w", stdout);
 
     int n, k, q;
     std::cin >> q;

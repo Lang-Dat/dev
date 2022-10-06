@@ -8,8 +8,8 @@ std::vector<int> ans;
 std::string str;
 
 bool isPalindrome() {
-    for (int i = start; i < (end + start) / 2; i++)
-        if (str[i] != str[end - 1 - i]) return false;
+    for (int i = start, j = end - 1; i < j; i++, j--)
+        if (str[i] != str[j]) return false;
     return true;
 }
 
@@ -21,13 +21,16 @@ int main()
     freopen("./KHOA.OUT", "w", stdout);
 
     std::cin >> str;
-    
-    for (start, end = str.size(); start < str.size() - 1; start++) {
+    str += str;
+    for (start = 0, end = str.size() / 2; start < str.size() / 2; start++, end++)
         if (isPalindrome()) ans.push_back(start);
-        str
+    if (ans.empty()) {
+        std::cout << -1;
+        return 0;
     }
+    std::cout << ans.size() << "\n";
     for (int i : ans)
-        if (start == 0) std::cout << 1 << " " < str.size() << "\n";
-        else std::cout << start + 1 << " " << start + 2 << "\n";
+        if (i == 0) std::cout << str.size() / 2<< " " << 1 << "\n";
+        else std::cout << i << " " << i + 1 << "\n";
     return 0;
 }

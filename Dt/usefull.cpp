@@ -14,3 +14,9 @@ bool isPrime(int n) {
         if (n % i == 0 || n % (i + 2) == 0) return false;
     return true;
 }
+int tongUoc(int n, int sum = 1) {
+    for (int i = 2; i * i <= n; i++)
+        if (n % i == 0 && i * i != n) sum += i + n / i;
+        else if (n % i == 0 && i * i == n) sum += i;
+    return sum;
+}
