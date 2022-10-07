@@ -13,6 +13,7 @@ int main()
 
     ull n;
     std::cin >> n;
-    std::cout << ((n % MOD) * ((n + 1) % MOD) * ((2*n + 1) % MOD) / 6) % MOD;
+    n %= MOD;
+    std::cout << (n * (n + 1) * (2*n + 1) / 6) % MOD;
     return 0;
 }
