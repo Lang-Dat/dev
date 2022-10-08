@@ -1,8 +1,12 @@
 #pragma GCC optimize("O2")
 #include <iostream>
 #include <algorithm>
+#include <vector>
 
 #define ull unsigned long long
+
+const int LIM = 1e6;
+ull nums[LIM];
 
 int main()
 {
@@ -11,17 +15,19 @@ int main()
     freopen("./LENGTH.INP", "r", stdin);
     freopen("./LENGTH.OUT", "w", stdout);
 
-    int n, tmp, best = INT32_MAX, k;
+    ull n, tmp, best = INT32_MAX, k;
     std::cin >> n >> k;
-    ull nums[n + 1];
-    nums[0] = 0;
     for (int i = 1; i <= n; i++) {
         std::cin >> tmp;
-        nums[i] = tmp += nums[i - 1];
+        nums[i] = tmp + nums[i - 1];
     }
-    for (int i = 1; i <= n; i++) {
+    best = std::lower_bound(nums, nums + n, k) - nums;
+    for (int i = 1; i < n && nums[n] - nums[i - 1] >= k; i++) {
         int r = std::lower_bound(nums + i + 1, nums + n, nums[i-1] + k) - nums;
-        best = std::min(best, r - i + 1);
+        if (r == n && nums[r] - nums[i-1] < k) continue;
+        if (r - i + 1 < best) {
+            best = r - i + 1;
+        }
     }
     std::cout << best;
     return 0;
