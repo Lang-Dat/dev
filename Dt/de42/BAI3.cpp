@@ -18,10 +18,11 @@ int main()
 
     int n, l = 0, r = -1, best = 0, curr = 0, i;
     std::cin >> n;
-    short nums[n];
+    int nums[n];
     for (int i = 0; i < n; i++)
         std::cin >> nums[i];
     if (isPrime(nums[0])) curr++;
+    
     for (i = 1; i < n; i++) {
         if (nums[i] >= nums[i - 1] && isPrime(nums[i])) curr++;
         else {

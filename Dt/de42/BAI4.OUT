@@ -1,0 +1,8 @@
+start = -100 end = 9900
+start = -9 end = -4
+start = 0 end = 10
+start = 5 end = 15
+ans = 0 i = 1 prevStart = -100 maxEnd = 9900
+ans = 0 i = 2 prevStart = -100 maxEnd = 9900
+ans = 0 i = 3 prevStart = -100 maxEnd = 9900
+10000
