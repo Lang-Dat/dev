@@ -1,5 +1,6 @@
 #pragma GCC optimize("O2")
 #include <iostream>
+#include <algorithm>
 
 bool isPrime(int n) {
     if (n <= 3) return n > 1;
@@ -16,33 +17,25 @@ int main()
     freopen("./BAI3.INP", "r", stdin);
     freopen("./BAI3.OUT", "w", stdout);
 
-    int n, l = 0, r = -1, best = 0, curr = 0, i;
+    int n, l = 0, best = 0, curr = 0, i;
     std::cin >> n;
     int nums[n];
     for (int i = 0; i < n; i++)
         std::cin >> nums[i];
-    if (isPrime(nums[0])) curr++;
-    
+
+    curr = isPrime(nums[0]);
     for (i = 1; i < n; i++) {
-        if (nums[i] >= nums[i - 1] && isPrime(nums[i])) curr++;
-        else {
+        if (nums[i] >= nums[i - 1] && isPrime(nums[i])) {
+            curr++;
             if (curr > best) {
-                r = i;
-                l = r - curr;
+                l = i - curr + 1;
                 best = curr;
             }
-            curr = 0;
-            if (isPrime(nums[i]))
-                curr++;
+        }
+        else {
+            curr = isPrime(nums[i]);
         }
     }
-    if (curr > best) {
-        r = i;
-        l = r - curr;
-        best = curr;
-    }
     std::cout << l + 1 << " " << best;
-    // for (int i = l; i < r; i++)
-    //     std::cout << nums[i] << " ";
     return 0;
 }
