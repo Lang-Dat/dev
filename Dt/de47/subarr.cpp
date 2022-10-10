@@ -2,17 +2,20 @@
 #include <iostream>
 #include <vector>
 
+#define ll long long
+const int LIM = 5 * 1e5 + 1;
+ll nums[LIM];
+
 int main()
 {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
     freopen("./subarr.INP", "r", stdin);
+    freopen("./test/subarr/test20/subarr.INP", "r", stdin);
     freopen("./subarr.OUT", "w", stdout);
 
     int n, count = 0;
     std::cin >> n;
-    int nums[n+1];
-    nums[0] = 0;
     for (int i = 1; i <= n; i++) {
         std::cin >> nums[i];
         nums[i] += nums[i-1];
@@ -21,7 +24,7 @@ int main()
         std::cout << 0;
         return 0;
     }
-    const int sum_of_seq = nums[n] / 3;
+    const ll sum_of_seq = nums[n] / 3;
     std::vector<int> startSplitPoints; // incresing order
     std::vector<int> endSplitPoints;   // decresing order
     for (int start = 1, end = n; start <= n && end >= 0; start++, end--) {

@@ -16,7 +16,7 @@ void decresingN(ull &n, ull i, ull &count) {
 ull soUoc(ull n, ull count = 1) {
     decresingN(n, 2, count);
     decresingN(n, 3, count);
-    for (int i = 5; i * i <= n; i += 6) {
+    for (ull i = 5; i * i <= n; i += 6) {
         decresingN(n, i, count);
         decresingN(n, i+2, count);
     }
@@ -34,8 +34,7 @@ int main()
     ull t, a, b;
     std::cin >> t;
     while (std::cin >> a >> b) {
-        std::cout << soUoc(a*b) << "\n";
+        std::cout << soUoc((ull)a*b) << "\n";
     }
-
     return 0;
 }
