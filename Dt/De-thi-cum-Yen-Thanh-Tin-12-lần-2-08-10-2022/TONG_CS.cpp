@@ -6,7 +6,7 @@
 const int LIM = 9*9+5;
 int pre_make[LIM];
 
-ull tongChuSo(int n, int sum = 0) {
+int tongChuSo(int n, int sum = 0) {
     while(n > 0) {
         sum += n % 10;
         n /= 10;
@@ -26,11 +26,12 @@ int main()
 
     for (int i = 0; i <= 9 * 9; i++) {
         int n = i;
-        while(n >= 9) {
+        while(n > 9) {
             n = tongChuSo(n);         
         }
         pre_make[i] = n;
     }
+
     for (int i = a; i <= b; i++) {
         sum += pre_make[tongChuSo(i)];
     }
