@@ -18,8 +18,8 @@ int main()
 {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
-    freopen("./kinhdoang.INP", "r", stdin);
-    freopen("./kinhdoang.OUT", "w", stdout);
+    freopen("./kinhdoanh.INP", "r", stdin);
+    freopen("./kinhdoanh.OUT", "w", stdout);
 
     int n;
     std::cin >> n;

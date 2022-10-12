@@ -28,7 +28,7 @@ std::unordered_map<int, int> phanTichN(int n, std::unordered_map<int, int> freq_
     if (n > 1) freq_prime[n] += 1;
     return freq_prime;
 }
-int sumOfFactor(ull n) {
+ull sumOfFactor(ull n) {
     std::unordered_map<int, int> freq_prime = phanTichN(n);
     ull sum = 1;
     for (const auto &p : freq_prime) {
@@ -43,10 +43,10 @@ int main()
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
     freopen("./tonguoc.INP", "r", stdin);
-    freopen("./tonguoc.OUT", "w", stdout);
+    // freopen("./tonguoc.OUT", "w", stdout);
 
-    ull n;
-    std::cin >> n;
+    ull n = 1e9;
+    // std::cin >> n;
 
     std::cout << sumOfFactor(n);
     return 0;

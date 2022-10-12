@@ -1,4 +1,3 @@
-#pragma GCC optimize("O2")
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -24,8 +23,8 @@ int main()
 {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
-    freopen("./DAY_CON.INP", "r", stdin);
-    freopen("./DAY_CON.OUT", "w", stdout);
+    freopen("./day_con.inp", "r", stdin);
+    freopen("./day_con.out", "w", stdout);
 
     std::cin >> n >> q;
     for (int i = 0; i < n; i++) {
@@ -36,4 +35,4 @@ int main()
         solve();
     }
     return 0;
-}
+}''
