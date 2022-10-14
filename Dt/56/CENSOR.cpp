@@ -45,6 +45,7 @@ int main()
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
     freopen("./CENSOR.INP", "r", stdin);
+    freopen("./TEST/censor/test10/CENSOR.INP", "r", stdin);
     freopen("./CENSOR.OUT", "w", stdout);
 
     std::cin >> str >> pattern;

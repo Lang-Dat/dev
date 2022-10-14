@@ -21,13 +21,12 @@ std::vector<int> build_LIS_table(string &pattern) {
     }
     return table;
 }
-int find_period(std::string &pattern) {
+int find_period(string pattern) {
     std::vector<int> LIS_table = build_LIS_table(pattern);
     int k = pattern.size() - 1;
-    while (LIS_table[k] != 0) {
+    while (k >= 0 && LIS_table[k] != 0) {
         k -= LIS_table[k];
     }
-    // return pattern.substr(0, k + 1);
     return k + 1;
 }
 
@@ -35,8 +34,8 @@ int main()
 {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
-    freopen("./RATIO.INP", "r", stdin);
-    freopen("./RATIO.OUT", "w", stdout);
+    freopen("./radio.inp", "r", stdin);
+    freopen("./radio.out", "w", stdout);
 
     string str;
     int n;
