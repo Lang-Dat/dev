@@ -12,7 +12,8 @@ int main()
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
     freopen("./LOCO.INP", "r", stdin);
-    freopen("./LOCO.OUT", "w", stdout);
+    freopen("./TEST/loco/Test01/LOCO.INP", "r", stdin);
+    // freopen("./LOCO.OUT", "w", stdout);
 
     ull a = 1, b = 2, c = 4, n, m;
     std::cin >> n >> m;
