@@ -15,7 +15,7 @@ int SPF[LIM]; // smallest prime factor
 void sieve() {
     for (int i = 2; i < LIM; i++)
         SPF[i] = i; // making prime number larger than sqrt(LIM) to be iself
-    for (int i = 3; i * i <= LIM; i++)
+    for (int i = 2; i * i <= LIM; i++)
         if (SPF[i] == i) {
             SPF[i] = i;
             for (int j = i * i; j <= LIM; j += i)
