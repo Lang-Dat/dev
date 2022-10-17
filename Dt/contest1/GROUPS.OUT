@@ -1,0 +1,8 @@
+5 6 7 26 27 28 29 
+i = 0 nums[i] = 5 nums[i]+k = 8 nums[itr] = 0 itr = 7
+i = 1 nums[i] = 6 nums[i]+k = 9 nums[itr] = 0 itr = 7
+i = 2 nums[i] = 7 nums[i]+k = 10 nums[itr] = 0 itr = 7
+i = 3 nums[i] = 26 nums[i]+k = 29 nums[itr] = 27 itr = 4
+i = 4 nums[i] = 27 nums[i]+k = 30 nums[itr] = 28 itr = 5
+i = 5 nums[i] = 28 nums[i]+k = 31 nums[itr] = 29 itr = 6
+i = 6 nums[i] = 29 nums[i]+k = 32 nums[itr] = 0 itr = 7
