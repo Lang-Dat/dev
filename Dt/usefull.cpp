@@ -7,8 +7,8 @@
 #define ull unsigned long long
 
 // help funcion
-void decresingN(int &n, int i, std::unordered_map<int, int> &freq_prime) {
-    int tmp = 0;
+void decresingN(ull &n, ull i, std::unordered_map<ull, ull> &freq_prime) {
+    ull tmp = 0;
     while (n % i == 0) {
         n /= i;
         tmp++;
@@ -18,18 +18,18 @@ void decresingN(int &n, int i, std::unordered_map<int, int> &freq_prime) {
     }
 }
 // Phân tích n ra thừa số nguyên tố và trả về umpii
-std::unordered_map<int, int> phanTichN(int n, std::unordered_map<int, int> freq_prime = {}) {
+std::unordered_map<ull, ull> phanTichN(ull n, std::unordered_map<ull, ull> freq_prime = {}) {
     decresingN(n, 2, freq_prime);
     decresingN(n, 3, freq_prime);
-    for (int i = 5; i * i <= n; i += 6) {
+    for (ull i = 5; i * i <= n; i += 6) {
         decresingN(n, i, freq_prime);
         decresingN(n, i+2, freq_prime);
     }
     if (n > 1) freq_prime[n] += 1;
     return freq_prime;
 }
-int sumOfFactor(ull n) {
-    std::unordered_map<int, int> freq_prime = phanTichN(n);
+ull sumOfFactor(ull n) {
+    std::unordered_map<ull, ull> freq_prime = phanTichN(n);
     ull sum = 1;
     for (const auto &p : freq_prime) {
         // fix std::pow'bug by + 0.1
@@ -38,16 +38,16 @@ int sumOfFactor(ull n) {
     return sum;
 }
 ull numOfDivisor(ull n) {
-    std::unordered_map<int, int> freq_prime = phanTichN(n);
-        int sum = 1;
+    std::unordered_map<ull, ull> freq_prime = phanTichN(n);
+        ull sum = 1;
     for (const auto &p : freq_prime) {
         sum *= (p.second + 1); 
     }
     return sum;
 }
-int tongUoc(int n, int sum = 0) {
+ull tongUoc(ull n, ull sum = 0) {
     // bruce force
-    for (int i = 1; i <= n; i++)
+    for (ull i = 1; i <= n; i++)
         // if (n % i == 0 && i * i != n) sum += i + n / i;
         // else if (n % i == 0 && i * i == n) sum += i;
         if (n % i == 0) {
@@ -56,51 +56,59 @@ int tongUoc(int n, int sum = 0) {
         }
     return sum;
 }
-int tongChuSo(int n, int sum = 0) {
+ull tongChuSo(ull n, ull sum = 0) {
     while(n > 0) {
         sum += n % 10;
         n /= 10;
     }
     return sum;
 }
-bool isPrime(int n) {
+bool isPrime(ull n) {
     if (n <= 3) return n > 1;
     if (n % 2 == 0 || n % 3 == 0) return false;
-    for (int i = 5; i <= std::sqrt(n); i += 6)
+    for (ull i = 5; i <= std::sqrt(n); i += 6)
         if (n % i == 0 || n % (i + 2) == 0) return false;
     return true;
 }
-inline bool isPerfectSQ(int n) {
-    return (int)std::sqrt(n) * (int)std::sqrt(n) == n;
+inline bool isPerfectSQ(ull n) {
+    return (ull)std::sqrt(n) * (ull)std::sqrt(n) == n;
 }
-int v_to_int(std::vector<int> number) {
-    // convert vector contain single digit to integer
-    int num = 0;
-    for (int i : number) {
+ull v_to_ull(std::vector<ull> number) {
+    // convert vector contain single digit to ulleger
+    ull num = 0;
+    for (ull i : number) {
         num = num * 10 + i;
     }
     return num;
 }
-int main() {
-    // freopen("test.inp", "w", stdout);
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    freopen("test.inp", "r", stdin);
-    int count = 10000;
-    // for (int i = 532664; i < 532664 + count; i += 7)
-    //     std::cout << i << " ";
-    // for (int i = 532664; i < 532664 + count; i += 3)
-    //     std::cout << i << " ";
-    int n;
-    Timer time;
-    // log(sumOfFactor(n), tongUoc(n))
-    for (int i = 0; i < 2 * count; i++)
-    {
-        std::cin >> n;
-        // sumOfFactor(n);
-        tongUoc(n);
-        // if (sumOfFactor(n) != tongUoc(n))
-        //     std::cout << n << " ";
+class KMP {
+    const std::string &pattern;
+    ull m;
+    std::vector<int> table;
+public:
+    KMP(const std::string &pattern)
+        : pattern(pattern), table(pattern.size()), m(pattern.size()) {
+        int i = 0;
+        for (int j = 1; j < m; j++) {
+            while (i > 0 && pattern[i] != pattern[j])
+                i = table[i-1];
+            if (pattern[i] == pattern[j])
+                i += 1;
+            table[j] = i;
+        }
+    }  
+    std::vector<int> find_in(const std::string &haystack) {
+        std::vector<int> index_of_occu;
+        for (int i = 0, j = 0; j < (int)haystack.size(); j++) {
+            while (i > 0 && pattern[i] != haystack[j])
+                i = table[i-1];
+            if (pattern[i] == haystack[j])
+                i += 1;
+            if (i == m) {
+                index_of_occu.push_back(j + 1 - m);
+                i = table[i-1];
+            }
+        }
+        return index_of_occu;
     }
-    logm("Done in\n")
-}
+};
