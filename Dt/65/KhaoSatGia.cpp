@@ -21,7 +21,8 @@ int main()
     freopen("./KhaoSatGia.OUT", "w", stdout);
 
     string str;
-    int min_cost = 0;
+    int min_cost = 0, n;
+    std::cin >> n;
     while (std::cin >> str) {
         min_cost += process(str);
     }
