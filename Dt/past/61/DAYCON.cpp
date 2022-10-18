@@ -6,7 +6,7 @@
 #include <algorithm>
 using namespace std;
 
-#define ull long long
+#define ll long long
 
 int main()
 {
@@ -15,8 +15,9 @@ int main()
     freopen("./DAYCON.INP", "r", stdin);
     freopen("./DAYCON.OUT", "w", stdout);
 
-    ull tmp, prev, n, best = INT64_MIN, sum;
+    ll tmp, prev, n, best = INT64_MIN, sum;
     std::cin >> n >> sum;
+    best = max(best, sum);
     while (std::cin >> tmp) {
         sum = max(tmp, sum + tmp);
         best = max(best, sum);
