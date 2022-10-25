@@ -7,7 +7,8 @@ using namespace std;
 
 string str;
 int n, best = 0, ans = 0;
-
+const int LIM = 1e6;
+int dp[LIM]; // dp[i] = longest vaild length end in str[i]
 bool isLongestVaild(int &start, int currMax = 0) {
     int open = 0, i;
 
@@ -43,8 +44,21 @@ int main()
     freopen("./NGOAC.OUT", "w", stdout);
 
     std::cin >> str;
-    for (int i = 0; i < str.size(); i++) {
-        ans += isLongestVaild(i);
+    str.insert(str.begin(), ' ');
+    for (int i = 1; i < str.size(); i++) {
+        if (str[i] == '(') dp[i] = 0;
+        else if (str[i] == ')') {
+            if (str[i-1] == '(')
+                dp[i] = dp[i-2] + 2;
+            else if (str[i-1] == ')' && str[i-dp[i-1]-1] == '(')
+                dp[i] = dp[i-dp[i-1]-2] + dp[i-1] + 2;
+        }
+        if (dp[i] == best) {
+            ans++;
+        } else if (dp[i] > best) {
+            ans = 1;
+            best = dp[i];
+        }
     }
 
     if (best == 0) {

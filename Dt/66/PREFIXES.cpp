@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 
-int n, count = 0;
+int n, ans = 0;
 string str;
 
 int main()
@@ -20,11 +20,11 @@ int main()
     // db(str)
     for (int i = 0; i < str.size(); i += 2) {
         if (str[i] == str[i+1]) {
-            count++;
+            ans++;
             str[i] = (str[i] == 'a') ? 'b' : 'a';
         }
     }
-    std::cout << count << "\n";
+    std::cout << ans << "\n";
     cout << str;
     return 0;
 }

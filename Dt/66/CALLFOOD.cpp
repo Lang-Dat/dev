@@ -1,22 +1,23 @@
 /**
  *	author: Lang Dat
  *	create: 23-10-2022 00:35:07
+ *	[25-10-2022 21:55:21] Bug lưu ý về kiểu giữ liệu, có thể có số âm và > 2^31 nên phải dùng ll
 **/
 #include <iostream>
 #include <algorithm>
 using namespace std;
 
-#define ull unsigned long long
+#define ll long long
 
 struct Food {
-    ull if_first = 0, cost = 0, diff;
+    ll a = 0, b = 0, diff;
     int index;
 };
 const int LIM = 5 * 1e5 + 10;
 Food f[LIM];
-ull pre_sum[LIM]; 
+ll min_f[LIM]; // min from last to begin e.g min_f[k ... n] = min(f[k].a, .., f[k].n) 
+ll max_diff[LIM];
 int n;
-ull curr_sum, min_first = INT32_MAX;
 
 int main()
 {
@@ -26,39 +27,27 @@ int main()
     freopen("./CALLFOOD.OUT", "w", stdout);
 
     std::cin >> n;
-    for (int i = 1; i <= n; i++) {
-        std::cin >> f[i].if_first >> f[i].cost;
-        f[i].diff = f[i].cost - f[i].if_first;
-        if (f[i].if_first < min_first) {
-            min_first = f[i].if_first;
-        }
+    for (int i = 0; i < n; i++) {
+        std::cin >> f[i].a >> f[i].b;
+        f[i].diff = f[i].b - f[i].a;
     }
     
-    sort(f, f + n, [](Food &a, Food &b) {
-        return a.cost < b.cost;
+    sort(f, f + n, [](Food &f1, Food &f2) {
+        return f1.b < f2.b;
     });
 
-    for (int i = 1; i <= n; i++) {
-        pre_sum[i] += f[i].cost + pre_sum[i - 1];
-        f[i].index = i;
+    min_f[n-1] = f[n-1].a;
+    max_diff[0] = f[0].diff;
+    for (int l = 1, r = n - 2; l < n; l++, r--) {
+        min_f[r] = min(f[r].a, min_f[r+1]);
+        max_diff[l] = max(f[l].diff, max_diff[l - 1]);
     }
 
-    Food min = f[1]; // store min first cost;
-    for (int i = 2; i <= n; i++) {
-        if ((min.cost + f[i].if_first) < (min.if_first + f[i].cost)) {
-            min = f[i];
-        }
-    }
-    std::cout << min_first << "\n";
-    for (int i = 2; i <= n; i++) {
-        curr_sum = pre_sum[i];
-        curr_sum += min.if_first;
-        if (min.index >= i) {
-            curr_sum -= f[i].cost;
-        } else {
-            curr_sum -= f[min.index].cost;
-        }
-        std::cout << curr_sum << "\n";
+    ll curr_sum = 0;
+    for (int i = 0; i < n; i++) {
+        curr_sum += f[i].b;
+        ll sum = min(curr_sum - max_diff[i], curr_sum - f[i].b + min_f[i]);
+        std::cout << sum << "\n";
     }
     return 0;
 }
