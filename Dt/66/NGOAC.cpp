@@ -8,15 +8,22 @@ using namespace std;
 string str;
 int n, best = 0, ans = 0;
 
-bool isLongestVaild(int start) {
-    int open = 0, currMax = 0;
-    for (int i = start; i < str.size(); i++) {
+bool isLongestVaild(int &start, int currMax = 0) {
+    int open = 0, i;
+
+    for (i = start; i < str.size(); i++) {
         if (str[i] == '(') open++;
         else if (str[i] == ')' && open > 0) open--;
-        else break;
+        else {
+            start = i;
+            break;
+        }
         if (open == 0 && i - start + 1 > currMax) {
             currMax = i - start + 1;
         }
+        // if (i == str.size() - 1) {
+        //     start = str.size();
+        // }
     }
     if (currMax == best) {
         return true;

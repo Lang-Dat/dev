@@ -19,11 +19,7 @@ int main()
     for (int i = 0; i < n; i++) {
         std::cin >> tmp;
         prevSum += tmp;
-        if (tmp % 2 == 0) {
-            so_chan++;
-        } else {
-            so_le++;
-        }
+        (tmp % 2 == 0) ? so_chan++ : so_le++;
     }
     while (std::cin >> type >> add) {
         if (type == 0) {
