@@ -25,6 +25,9 @@ int main()
             if (n % i == 0) {
                 std::cout << n / i << "";
                 return 0;
+            } else if (n % (i + 2) == 0) {
+                std::cout << n / (i + 2) << "";
+                return 0;
             }
         }
         std::cout << -1 << "";
