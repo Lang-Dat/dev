@@ -1,0 +1,1 @@
+{"name":"Local: ROBOT","url":"e:\\LDat\\dev\\Dt\\86\\ROBOT.cpp","tests":[{"id":1667480282457,"input":"5\n2\n1 1\n2 3\n4 4\n3 3","output":"55"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\86\\ROBOT.cpp","group":"local","local":true}

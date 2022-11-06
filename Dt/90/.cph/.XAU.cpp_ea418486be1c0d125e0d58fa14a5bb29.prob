@@ -1,0 +1,1 @@
+{"name":"Local: XAU","url":"e:\\LDat\\dev\\Dt\\90\\XAU.cpp","tests":[{"id":1667737317263,"input":"ana\nbnaana","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\90\\XAU.cpp","group":"local","local":true}
