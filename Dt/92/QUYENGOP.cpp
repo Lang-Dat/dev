@@ -19,8 +19,7 @@ int main()
 
     ull n;
     std::cin >> n;
-    int x = sqrt(n);
+    ull x = sqrt(n);
     std::cout << n*(n + 1)/2 - x*(x + 1)*(2*x + 1) / 6 << "";
-
     return 0;
 }

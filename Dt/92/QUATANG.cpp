@@ -28,7 +28,7 @@ int main()
     sort(nums, nums + n);
     for (int i = 0; i < n; i++) {
         int ind = upper_bound(nums + i + 1, nums + n, x - nums[i] + 1) - nums; 
-        if (nums[ind-1] + nums[i] < x) {
+        if (nums[ind-1] + nums[i] <= x && ind != i + 1) {
             best = max(best, nums[i] + nums[ind -1]);
         }
     }

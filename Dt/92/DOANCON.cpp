@@ -27,8 +27,8 @@ int main()
         }
         dp[n-1] = 1;
         for (int j = n - 2; j >= 0; j--) {
-            if ((nums[j] >= 0 && nums[j + 1] < 0) ||
-                (nums[j] < 0 && nums[j + 1] >= 0)) {
+            if ((nums[j] > 0 && nums[j + 1] < 0) ||
+                (nums[j] < 0 && nums[j + 1] > 0)) {
                     dp[j] = 1 + dp[j + 1];
                 }
             else {
@@ -38,6 +38,7 @@ int main()
         for (int i = 0; i < n; i++) {
             std::cout << dp[i] << " ";
         }
+        std::cout << "\n";
     }
     return 0;
 }
