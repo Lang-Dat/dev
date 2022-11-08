@@ -1,6 +1,7 @@
 /**
  *	author: Lang Dat
  *	create: 07-11-2022 29:46:07
+ *  [07-11-2022 28:23:14] Bug: Phải cho tần suất các số vào mảng trước
 **/
 #include <iostream>
 using namespace std;
@@ -21,9 +22,11 @@ int main()
     std::cin >> n;
     while (std::cin >> tmp) {
         freq[tmp]++;
-        if (freq[tmp] > best) {
-            best = freq[tmp];
-            id = tmp;
+    }
+    for (int i = 0; i < LIM; i++) {
+        if (best < freq[i]) {
+            id = i;
+            best = freq[i];
         }
     }
     std::cout << id << "";
