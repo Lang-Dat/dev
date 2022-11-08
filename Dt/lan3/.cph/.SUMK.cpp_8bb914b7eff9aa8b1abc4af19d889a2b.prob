@@ -1,0 +1,1 @@
+{"name":"Local: SUMK","url":"e:\\code\\dev\\Dt\\lan3\\SUMK.cpp","tests":[{"id":1667897983043,"input":"3 5\n2 5 -2\n","output":"1"},{"id":1667897993306,"input":"5 10\n1 2 3 4 6\n","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\dev\\Dt\\lan3\\SUMK.cpp","group":"local","local":true}
