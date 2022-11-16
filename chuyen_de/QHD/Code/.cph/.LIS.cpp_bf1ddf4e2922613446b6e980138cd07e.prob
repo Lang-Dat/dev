@@ -1,0 +1,1 @@
+{"name":"Local: LIS","url":"e:\\LDat\\dev\\chuyen_de\\QHD\\Code\\LIS.cpp","tests":[{"id":1668604731904,"input":"5\n1 3 2 2 5","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\chuyen_de\\QHD\\Code\\LIS.cpp","group":"local","local":true}
