@@ -17,16 +17,16 @@ int LIS(int *nums, int n) {
     dp[0] = -INF;
     for (int i = 0; i < n; i++) {
         int j = upper_bound(dp.begin(), dp.end(), nums[i]) - dp.begin();
-        if (dp[j-1] < nums[i] && nums[i] < dp[j])
+        if (dp[j-1] < nums[i] && nums[i] < dp[j]) {
             dp[j] = nums[i];
+        }
     }
-
     int ans = 0;
     for (int i = 0; i <= n; i++) {
-        if (dp[i] < INF)
-            ans = i;
+        if ((i == n) || dp[i+1] == INF)
+            return i;
     }
-    return 0;
+    return 1;
 }
 int main()
 {
@@ -34,6 +34,7 @@ int main()
     std::cin.tie(nullptr);
     #ifndef ONLINE_JUDGE
     freopen("./LIS.INP", "r", stdin);
+    // freopen("../Test_Tap1+2/LIS/Test19/LIS.INP", "r", stdin);
     freopen("./LIS.OUT", "w", stdout);
     #endif
 
