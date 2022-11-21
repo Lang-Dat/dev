@@ -23,7 +23,7 @@ int main()
     product = lcm*gcd;
     
     for (int i = (int)sqrt(product)/gcd*gcd; i > 0; i -= gcd) {
-        if (product % i == 0) {
+        if (product % i == 0 && (product / i) % gcd == 0) {
             std::cout << i << " " <<  product / i << "";
             return 0;
         }
