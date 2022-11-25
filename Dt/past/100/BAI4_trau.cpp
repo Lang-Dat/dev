@@ -3,6 +3,7 @@
  *	create: 18-11-2022 58:17:19
 **/
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 #define ull unsigned long long
@@ -25,6 +26,10 @@ int main()
         arr[2*i] = 2*arr[i] + 1;
         arr[2*i + 1] = 3*arr[i] + 1;
     }
+    sort(arr, arr + n + 1);
+    // for (int i = 0; i < 20; i ++)
+    //     std::cout << arr[i] << " ";
+        // db(i, arr[i])
     std::cout << arr[n] << "";
     return 0;
 }

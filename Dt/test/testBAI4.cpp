@@ -1,6 +1,6 @@
 /**
- *	author: Lang Dat
- *	create: 18-11-2022 41:19:19
+ *	author: Lăng Trọng Đạt
+ *	create: 24-11-2022 48:08:08
 **/
 #include <testlib/testlib.h>
 #include <iostream>
@@ -15,7 +15,10 @@ int T = 10, range = 5;
 void generator(int range) {
     ofstream file;
     file.open(NAME + ".INP");
-    file << rnd.next(1, range);
+    int n = rnd.next(1, range);
+    file << n << "\n";
+    for (int i = 0; i < n; i++)
+        file << rnd.next(-50, 50) << " ";
     file << "\n";
     file.close();
 }
@@ -32,7 +35,7 @@ int main(int argc, char* argv[])
 
         system(string(NAME + ".exe").c_str());
         system(string(NAME + "_trau.exe").c_str());
-        if (system(string("diff -y " + NAME + ".OUT " + NAME + "_trau.OUT").c_str()) == 1)
+        if (system(string("diff " + NAME + ".OUT " + NAME + "_trau.OUT").c_str()) == 1)
             quitf(_wa, "");
         std::cout << "\033[32mTest " << setw(2) <<  i << ":✅\t";
     
