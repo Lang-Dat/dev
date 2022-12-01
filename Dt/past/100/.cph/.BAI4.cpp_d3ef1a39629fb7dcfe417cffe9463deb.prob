@@ -1,1 +1,0 @@
-{"name":"Local: BAI4","url":"e:\\code\\dev\\Dt\\100\\BAI4.cpp","tests":[{"id":1669167070382,"input":"51","output":"175"},{"id":1669167090580,"input":"9999","output":"157639\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\dev\\Dt\\100\\BAI4.cpp","group":"local","local":true}

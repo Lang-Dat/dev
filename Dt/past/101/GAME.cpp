@@ -6,32 +6,11 @@
 using namespace std;
 
 static const int LIM = 40*500000 + 5;
-unsigned char dp[40][LIM];
+int dp[40][LIM];
 int nums[40];
 int n, target, k, ans = 0;
 
-bool solve(int pos = 0, int curr = 0) {
-    db(pos, curr)
-    if (pos == k) return solve(pos + 1, curr);
-    if (curr > target) return false;
-    if ((pos >= n)) {
-        if (curr == target) {
-            ans++;
-            return true;
-        }
-    } else if (dp[pos][curr] == 1) {
-        ans++;
-        return true;
-    } else if (dp[pos][curr] == 0) {
-        dp[pos][curr] = (solve(pos + 1, curr + nums[pos]) ||
-                            solve(pos + 1, curr)) ? 1 : -1;
-        if (dp[pos][curr] == 1) {
-            ans++;
-            return true;
-        }
-    }
-    return false;
-}
+
 
 int main()
 {
@@ -49,8 +28,6 @@ int main()
         std::cin >> nums[i];
     }
     target -= nums[k];
-    db(n, target, k)
-    solve();
     std::cout << ans << "";
     return 0;
 }
