@@ -1,0 +1,1 @@
+{"name":"Local: BAI3","url":"e:\\LDat\\dev\\Dt\\12\\BAI3.cpp","tests":[{"id":1670123179799,"input":"15 16 13 16","output":"+15+16+13+16=60\n- 15+16+13+16=30\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\12\\BAI3.cpp","group":"local","local":true}
