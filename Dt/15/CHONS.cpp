@@ -7,9 +7,9 @@
 #include <vector>
 using namespace std;
 
-// static const int LIM = 1001;
-static const int LIM = 5;
-bool dp[LIM][25];
+static const int LIM = 1001;
+// static const int LIM = 5;
+bool dp[LIM][LIM*100];
 int nums[LIM];
 int n, ans = 0, total = 0;
 
@@ -26,6 +26,7 @@ int main()
     std::cin.tie(nullptr);
     #ifndef ONLINE_JUDGE
     freopen("./CHONS.INP", "r", stdin);
+    // freopen("./Test/CHONS/Test036/CHONS.INP", "r", stdin);
     freopen("./CHONS.OUT", "w", stdout);
     #endif
 

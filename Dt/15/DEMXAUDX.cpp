@@ -9,7 +9,6 @@ using namespace std;
 
 static const int LIM = 1e3 + 5;
 bool dp[LIM][LIM]; // denote str[i...j] is palindrome or not
-int prefix_sum[LIM];
 
 int main()
 {
@@ -31,13 +30,15 @@ int main()
             dp[l][r] = dp[l+1][r-1] && str[l] == str[r];
     }
 
-    for (int i = 1; i <= n; i++) {
-        for (int j = 0; j <= i; j++)
-            prefix_sum[i] += (int)(dp[j][i - 1]);
-        prefix_sum[i] += prefix_sum[i-1];
-    }   
+    while (std::cin >> start >> end) {
+        int count = 0;
+        for (int i = start - 1; i < end; i++) {
+            for (int j = i; j < end; j++) {
+                count += (int)(dp[i][j]);
+            }
+        }
+        std::cout << count << "\n";
+    }
 
-    while (std::cin >> start >> end)
-        std::cout << prefix_sum[end] - prefix_sum[start - 1] << "\n";
     return 0;
 }
