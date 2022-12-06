@@ -11,12 +11,12 @@ static const int LIM = 5*1e5 + 5;
 int nums[LIM];
 int n, k;
 
-bool check(int length) {
+int check(int length) {
     // TC: O(n)
     int count = 0;
-    for (int i = 0; nums[i] >= k && count < k; i++)
+    for (int i = 0; nums[i] >= length && count < k; i++)
         count += nums[i] / length;
-    return count >= k;
+    return count;
 }
 
 int main()
@@ -39,7 +39,9 @@ int main()
     int l = 1, r = maxLength;
     while (l <= r) { // O(log2(maxLength))
         int mid = (l + r) / 2;
-        if (check(mid)) {
+        int count = check(mid);
+        if (count == k) maxLength = mid;
+        if (count >= k) {
             maxLength = mid;
             l = mid + 1;
         } else r = mid - 1;
