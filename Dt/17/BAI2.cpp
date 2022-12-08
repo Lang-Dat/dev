@@ -31,20 +31,14 @@ int main()
     bool isPrinted = false;
     std::cin >> num;
 
-    for (int i = 0, j; i < num.size();) {
-        int tmp = 0;
-        for (j = i; j < num.size(); j++) {
-            tmp = tmp * 10 + (num[j] - '0');
-            if (isPrime_(tmp)) {
-                if (!appeared.count(tmp))
-                    std::cout << tmp << " ";
-                appeared.insert(tmp);
-                isPrinted = true;
-                break;
-            }
+    for (char c : num) {
+        int tmp = c - '0';
+        if (isPrime_(tmp)) {
+            if (!appeared.count(tmp))
+                std::cout << tmp << " ";
+            appeared.insert(tmp);
+            isPrinted = true;
         }
-        if (j == num.size()) i++;
-        else i = j + 1;
     }
 
     if (!isPrinted) std::cout << 0 << "";
