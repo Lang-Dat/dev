@@ -1,0 +1,1 @@
+{"name":"Local: DUANGUA","url":"e:\\LDat\\dev\\Dt\\24\\DUANGUA.cpp","tests":[{"id":1670851927951,"input":"2 8\n3 5 1 4 6 9 10 2","output":"120"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\24\\DUANGUA.cpp","group":"local","local":true}

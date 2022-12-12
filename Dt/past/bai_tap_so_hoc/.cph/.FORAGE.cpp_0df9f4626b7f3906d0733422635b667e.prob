@@ -1,0 +1,1 @@
+{"name":"Local: FORAGE","url":"e:\\LDat\\dev\\Dt\\bai_tap_so_hoc\\FORAGE.cpp","tests":[{"id":1670490358057,"input":"17 4 3","output":"NO\n13"},{"id":1670490368189,"input":"17 4 3","output":"YES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\bai_tap_so_hoc\\FORAGE.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: TRAMBOM","url":"e:\\LDat\\dev\\Dt\\24\\TRAMBOM.cpp","tests":[{"id":1670852149101,"input":"5 3\n1 2 5  6 3","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\24\\TRAMBOM.cpp","group":"local","local":true}
