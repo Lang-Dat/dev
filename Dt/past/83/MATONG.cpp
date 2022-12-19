@@ -7,40 +7,26 @@
 #include <unordered_map>
 using namespace std;
 
-const int LIM = 1e6 + 6;
-int SPF[LIM];
+#define ull unsigned long long
 
-void sieve() {
-    for (int i = 1; i < LIM; i++)
-        SPF[i] = i;
-
-    for (int i = 2; i * i <= LIM; i++) {
-        if (SPF[i] == i) {
-            for (int j = i * i; j < LIM; j += i) {
-                if (SPF[j] == j) {
-                    SPF[j] = i;
-                }
-            }
-        }
+int decresingN(ull &n, ull i) {
+    ull tmp = 0;
+    while (n % i == 0) {
+        n /= i;
+        tmp++;
     }
+    return tmp;
 }
-
-std::unordered_map<int, int> phanTichN(int n) {
-    std::unordered_map<int, int> ans;
-    while (n != 1) {
-        ans[SPF[n]]++;
-        n /= SPF[n];
+int phanTichN(ull n) {
+    ull count = 1;
+    count *= 1 + decresingN(n, 2);
+    count *= 1 + decresingN(n, 3);
+    for (ull i = 5; i * i <= n; i += 6) {
+        count *= 1 + decresingN(n, i);
+        count *= 1 + decresingN(n, i+2);
     }
-    return ans;
-}
-
-int numOfDivisor(int n) {
-    std::unordered_map<int, int> freq_prime = phanTichN(n);
-    int sum = 1;
-    for (const auto &p : freq_prime) {
-        sum *= (p.second + 1); 
-    }
-    return sum;
+    if (n > 1) count *= 2;
+    return count;
 }
 
 int main()
@@ -48,13 +34,14 @@ int main()
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
     freopen("./MATONG.INP", "r", stdin);
-    freopen("./MATONG.OUT", "w", stdout);
+    freopen("./Test/MATONG/TEST09/MATONG.INP", "r", stdin);
+    // freopen("./MATONG.OUT", "w", stdout);
 
-    int n, ans = 0, tmp;
-    sieve();
+    ull n, ans = 0, tmp;
+    // sieve();
     std::cin >> n;
     while (std::cin >> tmp) {
-        ans += tmp*numOfDivisor(tmp);
+        ans += tmp*phanTichN(tmp);
     }
 
     std::cout << ans << "";

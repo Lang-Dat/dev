@@ -1,0 +1,1 @@
+{"name":"Local: step","url":"e:\\LDat\\dev\\Dt\\26-mang\\array1d-1\\step.cpp","tests":[{"id":1671194651216,"input":"5\n13 53 147 66 758","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\26-mang\\array1d-1\\step.cpp","group":"local","local":true}

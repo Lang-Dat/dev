@@ -1,0 +1,1 @@
+{"name":"Local: RANNUM","url":"e:\\LDat\\dev\\chuyen_de\\5_TIMKIEMNHIPHAN_B19_22\\CODE\\RANNUM.cpp","tests":[{"id":1669295342380,"input":"6\n\n1 2 3 1 2 2","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\chuyen_de\\5_TIMKIEMNHIPHAN_B19_22\\CODE\\RANNUM.cpp","group":"local","local":true}

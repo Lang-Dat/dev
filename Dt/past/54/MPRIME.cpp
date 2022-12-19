@@ -43,7 +43,7 @@ int main()
 {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
-    freopen("./MPRIME.INP", "r", stdin);
+    // freopen("./MPRIME.INP", "r", stdin);
     freopen("./MPRIME.OUT", "w", stdout);
 
     // ull tmp; // n < 500

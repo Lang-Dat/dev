@@ -16,7 +16,7 @@ int main()
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
     freopen("./NGANHANG.INP", "r", stdin);
-    // freopen("./NGANHANG/NGANHANG/Test7/NGANHANG.INP", "r", stdin);
+    freopen("./NGANHANG/NGANHANG/Test8/NGANHANG.INP", "r", stdin);
     freopen("./NGANHANG.OUT", "w", stdout);
 
     int n, m, count = 0;
