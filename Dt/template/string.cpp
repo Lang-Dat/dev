@@ -1,5 +1,13 @@
 #include <bits/stdc++.h>
 
+
+string operator*(string &str, int n) {
+    string res = "";
+    for (int i = 0; i < n; i++)
+        res += str;
+    return res;
+}
+
 class KMP {
     const std::string &pattern;
     int m;

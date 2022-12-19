@@ -1,17 +1,12 @@
 // https://math.stackexchange.com/questions/22721/is-there-a-formula-to-calculate-the-sum-of-all-proper-divisors-of-a-number
-#include <math.h>
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-#include <algorithm>
-
+#include <bits/stdc++.h>
     
 #define uint64_t unsigned long long
 
 const int MAX = 1e6;
 const long long SUM_PRIMES = 37550402023;
 
-int perfect_num[] = {6, 28, 496, 8128, 33550336};
+std::unordered_set<uint64_t> perfect_num = {6, 28, 496, 8128, 33550336, 18446744073709486080, 18446744073709289472, 18446744072635809792};
 // help funcion
 void decresingN(uint64_t &n, uint64_t i, std::unordered_map<uint64_t, uint64_t> &freq_prime) {
     uint64_t tmp = 0;
