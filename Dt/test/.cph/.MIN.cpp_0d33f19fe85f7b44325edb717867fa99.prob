@@ -1,1 +1,0 @@
-{"name":"Local: MIN","url":"e:\\LDat\\dev\\Dt\\test\\MIN.cpp","tests":[{"id":1667355674886,"input":"94 1","output":"95"},{"id":1667355684398,"input":"96 1","output":"105"},{"id":1667355690405,"input":"544999765453545 11","output":"545000555555555"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\test\\MIN.cpp","group":"local","local":true}

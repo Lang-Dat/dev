@@ -1,0 +1,1 @@
+{"name":"Local: quantrong","url":"e:\\LDat\\dev\\Dt\\30\\quantrong.cpp","tests":[{"id":1671370749094,"input":"6\n2 2 2 3 10 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\30\\quantrong.cpp","group":"local","local":true}

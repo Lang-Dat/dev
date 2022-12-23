@@ -1,1 +1,0 @@
-{"name":"Local: TABLE","url":"e:\\code\\dev\\Dt\\lan3\\TABLE.cpp","tests":[{"id":1667897800925,"input":"2 2\n1 2\n3 4\n3\n1\n","output":"2 1\n1 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\dev\\Dt\\lan3\\TABLE.cpp","group":"local","local":true}

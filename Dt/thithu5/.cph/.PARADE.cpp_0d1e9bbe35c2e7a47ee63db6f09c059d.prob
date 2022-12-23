@@ -1,1 +1,0 @@
-{"name":"Local: PARADE","url":"e:\\code\\dev\\Dt\\thithu5\\PARADE.cpp","tests":[{"id":1667898933965,"input":"3\n5 6\n8 9\n10 3","output":"9"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\dev\\Dt\\thithu5\\PARADE.cpp","group":"local","local":true}
