@@ -1,0 +1,1 @@
+{"name":"Local: TDSTT","url":"e:\\LDat\\dev\\Dt\\89\\TDSTT.cpp","tests":[{"id":1667659476354,"input":"5\n2 3 4 6 9","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\89\\TDSTT.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+clear && del -Q *.exe *.OUT && rar a "DAT.code" *.cpp && start . min

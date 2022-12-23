@@ -1,0 +1,1 @@
+{"name":"Local: BSBB","url":"e:\\code\\dev\\Dt\\83\\BSBB.cpp","tests":[{"id":1667177039059,"input":"4","output":"5"},{"id":1667177051911,"input":"5","output":"8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\dev\\Dt\\83\\BSBB.cpp","group":"local","local":true}

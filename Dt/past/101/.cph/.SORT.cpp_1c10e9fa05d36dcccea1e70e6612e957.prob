@@ -1,0 +1,1 @@
+{"name":"Local: SORT","url":"e:\\LDat\\dev\\Dt\\101\\SORT.cpp","tests":[{"id":1668775172898,"input":"5\n6 28 10 6 29","output":"6 6 28"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\101\\SORT.cpp","group":"local","local":true}
