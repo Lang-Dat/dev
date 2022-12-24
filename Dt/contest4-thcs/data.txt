@@ -1,0 +1,76 @@
+Unmerged paths:
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+	deleted by us:   ../.vscode/settings.json
+	deleted by us:   ../past/102/Test/BAI4/Test01/BAI4.OUT
+	deleted by us:   ../past/102/Test/BAI4/Test02/BAI4.INP
+	deleted by us:   ../past/12/.vscode/tasks.json
+	deleted by us:   ../past/15/Test/CHONS/Test001/CHONS.out
+	deleted by us:   ../past/15/Test/THUONG/Test002/THUONG.out
+	deleted by us:   ../past/15/Test/TIMKHOA/Test002/TIMKHOA.out
+	deleted by us:   ../past/24dethi/.vscode/settings.json
+	deleted by us:   "../past/24dethi/24\304\220\341\273\200-THI.docx"
+	deleted by us:   ../past/24dethi/ANHHOA.INP
+	deleted by us:   ../past/24dethi/ANHHOA.cpp
+	deleted by us:   ../past/24dethi/BSBB.cpp
+	deleted by us:   ../past/24dethi/DIEMANH.INP
+	deleted by us:   ../past/24dethi/DIEMANH.cpp
+	deleted by us:   ../past/24dethi/MUACO.INP
+	deleted by us:   ../past/24dethi/MUACO.OUT
+	deleted by us:   ../past/24dethi/MUACO.cpp
+	deleted by us:   "../past/36C_\304\220\341\273\200-THI-TH\341\273\254-HSG-L\341\272\246N-2-N\304\202M-2020/test/BAI5/test01/bai5.inp"
+	deleted by us:   "../past/De-thi-cum-Yen-Thanh-Tin-12-l\341\272\247n-2-08-10-2022/Test_YTL2/Dao_CS/test06/Dao_CS.out"
+	deleted by us:   "../past/YT-22-23/\304\220\341\273\200-thi-HSG-c\341\273\245m-YT-22-23-l\341\272\247n-1-Tin-h\341\273\215c.doc"
+	deleted by us:   ../past/de12/.vscode/settings.json
+	deleted by us:   ../past/de12/259277482_1120028002101256_2307073155295160378_n.png
+	deleted by us:   ../past/de12/260138694_922136095093347_4338037625276873653_n.png
+	deleted by us:   ../past/de12/261363426_880160952641198_3125295112839440798_n.png
+	deleted by us:   ../past/de12/261447139_702414020733518_2625324239462174181_n.png
+	deleted by us:   ../past/de12/262506107_915704572397896_446195242589413576_n.png
+	deleted by us:   ../past/de12/302555550_414364710830624_1653429236364676477_n.png
+	deleted by us:   ../past/de12/CHIAHET.INP
+	deleted by us:   ../past/de12/CHIAHET.OUT
+	deleted by us:   ../past/de12/CHIAHET.cpp
+	deleted by us:   ../past/de12/TONGBP.INP
+	deleted by us:   ../past/de12/TONGBP.OUT
+	deleted by us:   ../past/de12/TONGBP.cpp
+	deleted by us:   ../past/de12/TONGCHAN.INp
+	deleted by us:   ../past/de12/TONGCHAN.cpp
+	deleted by us:   ../past/de12/TRONGCAY.INP
+	deleted by us:   ../past/de12/TRONGCAY.OUT
+	deleted by us:   ../past/de12/TRONGCAY.cpp
+	deleted by us:   ../past/de14/.cph/.SothuN.cpp_4bf8d301dce003cea6071fa2fc484f01.prob
+	deleted by us:   ../past/de14/.vscode/settings.json
+	deleted by us:   ../past/de14/Daychiahet.OUT
+	deleted by us:   ../past/de14/Daychiahet.cpp
+	deleted by us:   ../past/de14/De14.doc
+	deleted by us:   ../past/de14/NT.INP
+	deleted by us:   ../past/de14/NT.OUT
+	deleted by us:   ../past/de14/NT.cpp
+	deleted by us:   ../past/de14/SothuN.INP
+	deleted by us:   ../past/de14/SothuN.OUT
+	deleted by us:   ../past/de14/SothuN.cpp
+	deleted by us:   ../past/de14/Timmax.INP
+	deleted by us:   ../past/de14/Timmax.OUT
+	deleted by us:   ../past/de14/Timmax.cpp
+	deleted by us:   ../past/de14/test.txt
+	deleted by us:   ../past/de16/BAI1.cpp
+	deleted by us:   ../past/de16/BAI3.cpp
+	deleted by us:   ../past/de16/BAI4.cpp
+	deleted by us:   ../past/de16/Bai-toan-thue-may.docx
+	deleted by us:   ../past/de16/activity selection.cpp
+	deleted by us:   ../past/de16/de16.doc
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../../DSA/greedy/
+	../24dethi/
+	../28/
+	../YT-22-23/
+	./
+	../de12/
+	../de14/
+	../de15/
+	../de16/
+	../de17/
+	../de9/
+

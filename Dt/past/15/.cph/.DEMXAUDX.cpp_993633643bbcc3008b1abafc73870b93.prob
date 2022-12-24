@@ -1,1 +1,0 @@
-{"name":"Local: DEMXAUDX","url":"e:\\LDat\\dev\\Dt\\15\\DEMXAUDX.cpp","tests":[{"id":1670249364558,"input":"4 2\nAbbA\n1 4\n2 3\n","output":"6\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\15\\DEMXAUDX.cpp","group":"local","local":true}

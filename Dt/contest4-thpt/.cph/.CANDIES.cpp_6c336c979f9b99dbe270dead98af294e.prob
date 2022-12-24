@@ -1,0 +1,1 @@
+{"name":"Local: CANDIES","url":"e:\\code\\dev\\Dt\\contest4-thpt\\CANDIES.cpp","tests":[{"id":1671785193796,"input":"8 4\n4 3 3 1 1 4 5 9\n1 10 50 14","output":"1\n2\n-1\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\dev\\Dt\\contest4-thpt\\CANDIES.cpp","group":"local","local":true}
