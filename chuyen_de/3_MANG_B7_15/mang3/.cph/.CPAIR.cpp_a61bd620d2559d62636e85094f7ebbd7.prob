@@ -1,0 +1,1 @@
+{"name":"Local: CPAIR","url":"e:\\LDat\\dev\\chuyen_de\\3_MANG_B7_15\\mang3\\CPAIR.cpp","tests":[{"id":1671889155878,"input":"6 5\n5 2 3 4 1 2","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\chuyen_de\\3_MANG_B7_15\\mang3\\CPAIR.cpp","group":"local","local":true}

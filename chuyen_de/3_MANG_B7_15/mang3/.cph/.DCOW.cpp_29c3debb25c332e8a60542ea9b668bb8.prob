@@ -1,0 +1,1 @@
+{"name":"Local: DCOW","url":"e:\\LDat\\dev\\chuyen_de\\3_MANG_B7_15\\mang3\\DCOW.cpp","tests":[{"id":1671889750328,"input":"7\n1 1 5 3 5 1 3","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\chuyen_de\\3_MANG_B7_15\\mang3\\DCOW.cpp","group":"local","local":true}

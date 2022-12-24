@@ -1,0 +1,1 @@
+{"name":"Local: CROSS","url":"e:\\LDat\\dev\\chuyen_de\\3_MANG_B7_15\\mang3\\CROSS.cpp","tests":[{"id":1671888036296,"input":"8\n3 1\n3 0\n6 0\n2 1\n4 1\n3 0\n4 0\n3 1","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\chuyen_de\\3_MANG_B7_15\\mang3\\CROSS.cpp","group":"local","local":true}
