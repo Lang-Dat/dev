@@ -1,0 +1,1 @@
+{"name":"Local: MODK","url":"e:\\LDat\\dev\\Dt\\44\\MODK.cpp","tests":[{"id":1672749906897,"input":"5 3\n1 2 3 4 5","output":"3"},{"id":1672749922785,"input":"3 3\n6 6 6","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\44\\MODK.cpp","group":"local","local":true}

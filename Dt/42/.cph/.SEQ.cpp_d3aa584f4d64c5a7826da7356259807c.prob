@@ -1,0 +1,1 @@
+{"name":"Local: SEQ","url":"e:\\LDat\\dev\\Dt\\42\\SEQ.cpp","tests":[{"id":1672319009988,"input":"5 2\n5 -1 2 -3 2\n","output":"12"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\42\\SEQ.cpp","group":"local","local":true}
