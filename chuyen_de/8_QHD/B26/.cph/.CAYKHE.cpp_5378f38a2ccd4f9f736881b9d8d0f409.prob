@@ -1,0 +1,1 @@
+{"name":"Local: CAYKHE","url":"e:\\LDat\\dev\\chuyen_de\\8_QHD\\B26\\CAYKHE.cpp","tests":[{"id":1668313386236,"input":"5 10\n20 3\n19 1\n30 7\n24 3\n15 6\n","output":"63\n3 1 2 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\chuyen_de\\8_QHD\\B26\\CAYKHE.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: LCS","url":"e:\\LDat\\dev\\chuyen_de\\8_QHD\\B26\\LCS.cpp","tests":[{"id":1667310149953,"input":"AGTXAGT\nGAXTA","output":"GXT\n2 4 7\n1 3 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\chuyen_de\\8_QHD\\B26\\LCS.cpp","group":"local","local":true}
