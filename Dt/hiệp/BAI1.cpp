@@ -1,36 +1,53 @@
 #pragma GCC optimize("O3")
-
 #include <iostream>
+// #include <vector>
+// #include <cstring>
+// #include <algorithm>
+#include <iomanip>
+#include <math.h>
+// #include <map>
+// #include <set>
 using namespace std;
 
 #define ll long long
+#define all(x) x.begin(), x.end()
+#define ms(x, a) memset(x, a, sizeof(x))
+#define each(it, a) for(auto &it : a)
+#define el '\n'
+
+void dbg_out() { cerr << '\n'; }
+template<typename Head, typename... Tail>
+void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
+#define dbg(...) cerr << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+
 const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
+const int LIM = 1e6 + 5;
 
-int uoc(int n)
+long double a, alpha, h, ans;
+const double PI = 3.14159265359;
+
+void convert()
 {
-	int ans = 0;
-	for (int i = 1; i * i <= n; ++i)
-	{
-		if (n % i == 0)
-		{
-			if (i * i == n) ans += i;
-			else ans = ans + i + n / i;
-		}
-	}
-	return ans;
+	alpha = alpha * PI / 180;
+}
+
+void solve()
+{
+	cin >> a >> alpha >> h;
+	convert();
+	ans = tan(alpha) * a + h;
+	// cout << setprecision(3) << fixed << ans;
+	std::cout << fixed << setprecision(3) << ans ;
 }
 
 int main()
 {
-	ios_base::sync_with_stdio(false); cin.tie(0);
+	ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 	freopen("BAI1.INP", "r", stdin);
 	freopen("BAI1.OUT", "w", stdout);
-	int n, tmp, cnt = 0; cin >> n;
-	while (n--)
-	{
-		cin >> tmp;
-		if (uoc(tmp) - tmp == tmp) cnt++;
-	}
-	cout << cnt;
+	int t = 1;
+	// cin >> t;
+	while (t--)
+		solve();
 }

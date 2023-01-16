@@ -1,1 +1,0 @@
-{"name":"Local: LATGACH","url":"e:\\code\\dev\\Dt\\91\\LATGACH.cpp","tests":[{"id":1667782385246,"input":"7\n9 7 6 16 23 8 17\n","output":"17 7 23"},{"id":1667782398356,"input":"5\n9 6 16 8 12\n","output":"-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\dev\\Dt\\91\\LATGACH.cpp","group":"local","local":true}

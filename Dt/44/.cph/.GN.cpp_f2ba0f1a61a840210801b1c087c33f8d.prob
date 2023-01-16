@@ -1,1 +1,0 @@
-{"name":"Local: GN","url":"e:\\LDat\\dev\\Dt\\44\\GN.cpp","tests":[{"id":1672748770874,"input":"abaab\naababacab","output":"12"},{"id":1672748849790,"input":"avbc\navvv","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\44\\GN.cpp","group":"local","local":true}

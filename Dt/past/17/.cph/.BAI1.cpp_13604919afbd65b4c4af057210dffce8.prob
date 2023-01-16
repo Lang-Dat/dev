@@ -1,1 +1,0 @@
-{"name":"Local: BAI1","url":"e:\\LDat\\dev\\Dt\\17\\BAI1.cpp","tests":[{"id":1670335216986,"input":"3\n1 2 3\n5 2 6\n7 2 9","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\17\\BAI1.cpp","group":"local","local":true}

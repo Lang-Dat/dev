@@ -1,1 +1,0 @@
-{"name":"Local: COUNTPRI","url":"e:\\LDat\\dev\\Dt\\bai_tap_so_hoc\\sohoc2\\COUNTPRI.cpp","tests":[{"id":1670729782059,"input":"3\n4 10\n7 20\n2 30","output":"2\n5\n10"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\bai_tap_so_hoc\\sohoc2\\COUNTPRI.cpp","group":"local","local":true}

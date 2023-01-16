@@ -1,1 +1,0 @@
-{"name":"Local: BKID","url":"e:\\LDat\\dev\\Dt\\26-mang\\array1d-1\\BKID.cpp","tests":[{"id":1671195780311,"input":"8 6 3 5 8 4 7 9 1","output":"1\n3\n4\n5\n6\n7\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\26-mang\\array1d-1\\BKID.cpp","group":"local","local":true}

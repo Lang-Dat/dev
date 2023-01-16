@@ -1,1 +1,0 @@
-{"name":"Local: xauhn","url":"e:\\code\\dev\\Dt\\93\\xauhn.cpp","tests":[{"id":1667895001690,"input":"ab","output":"ab"},{"id":1667895012131,"input":"abcabcabc","output":"abc"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\dev\\Dt\\93\\xauhn.cpp","group":"local","local":true}

@@ -1,1 +1,0 @@
-{"name":"Local: DRAGON","url":"e:\\code\\dev\\Dt\\contest4\\DRAGON.cpp","tests":[{"id":1671781694028,"input":"4\n3 6 2 3\n5\n3 12\n7 9\n4 14\n1 10\n8 7","output":"1\n2\n4\n0\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\dev\\Dt\\contest4\\DRAGON.cpp","group":"local","local":true}

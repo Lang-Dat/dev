@@ -1,1 +1,0 @@
-{"name":"Local: dayucln","url":"e:\\LDat\\dev\\Dt\\bai_tap_so_hoc\\sohoc2\\dayucln.cpp","tests":[{"id":1670587318439,"input":"2 3\n1 2 4\n3\n6 10 2","output":"1 2 4 4\n6 30 10 2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\bai_tap_so_hoc\\sohoc2\\dayucln.cpp","group":"local","local":true}

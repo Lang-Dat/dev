@@ -1,23 +1,14 @@
 /**
- *	author: Lăng Trọng Đạt
- *	create: 05-12-2022 32:13:20
+ *	author : Lăng Trọng Đạt
+ *	creater: 15-01-2023 08:28:19
 **/
 #include <iostream>
 #include <algorithm>
 #include <vector>
 using namespace std;
 
-static const int LIM_VALUE = 1e8,
-                 LIM = 5 * 1e5 + 5; // sub 3
-int nums[LIM], divisors[LIM_VALUE]; // divisors[i]: number of divisor of i
-
-void sieveDivisor() {
-    // Time complexity: O(nLog2(n)) (n is LIM_VALUE)
-    for (int i = 1; i < LIM_VALUE; i++)
-        for (int j = i; j < LIM_VALUE; j += i)
-            divisors[j]++;
-}
-
+static const int LIM = 1e5 + 5;
+static int nums[LIM];
 int lengthOfLIS(int *nums, int n) {
     static const int INF = INT32_MAX;
     std::vector<int> dp(n+2, INF); // dp[i]: phần tử nhỏ nhất mà tại đó một dãy con độ dài i kết thúc
@@ -30,7 +21,7 @@ int lengthOfLIS(int *nums, int n) {
     for (int i = 0; i <= n; i++) {
         if (dp[i+1] == INF) return i;
     }
-    return 1;
+    return -1;
 }
 
 int main()
@@ -38,21 +29,16 @@ int main()
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
     #ifndef ONLINE_JUDGE
-    freopen("./DAYSODEP.INP", "r", stdin);
-    freopen("./Testde14/DAYSODEP/Test016/DAYSODEP.INP", "r", stdin);
-    // freopen("./DAYSODEP.OUT", "w", stdout);
+    freopen("./Treelamp.INP", "r", stdin);
+    freopen("./Treelamp.OUT", "w", stdout);
     #endif
 
-    sieveDivisor();   
-
-    int n, tmp;
+    int n;
     std::cin >> n;
-    //int nums[n];
     for (int i = 0; i < n; i++) {
-        std::cin >> tmp;
-        nums[i] = divisors[tmp];
+        std::cin >> nums[i];
     }
-
-    cout << lengthOfLIS(nums, n);
+    
+    std::cout << lengthOfLIS(nums, n) << "";
     return 0;
 }

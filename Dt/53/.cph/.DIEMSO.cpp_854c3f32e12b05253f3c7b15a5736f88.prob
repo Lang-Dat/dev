@@ -1,1 +1,0 @@
-{"name":"Local: DIEMSO","url":"e:\\LDat\\dev\\Dt\\53\\DIEMSO.cpp","tests":[{"id":1673164085357,"input":"6\nN 3 5\nM 6 7\nT 5 5\nM 8 8\nY 6 2\nP 4 3","output":"N 4\nM 2\nT 3\nM 1\nY 4\nP 6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\53\\DIEMSO.cpp","group":"local","local":true}

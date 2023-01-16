@@ -1,1 +1,0 @@
-{"name":"Local: SPALIN","url":"e:\\LDat\\dev\\Dt\\42\\SPALIN.cpp","tests":[{"id":1672318850032,"input":"3\n1 7\n10 20\n20 30\n","output":"4\n1\n0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\42\\SPALIN.cpp","group":"local","local":true}

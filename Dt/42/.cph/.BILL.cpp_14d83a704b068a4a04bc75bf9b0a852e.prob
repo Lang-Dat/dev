@@ -1,1 +1,0 @@
-{"name":"Local: BILL","url":"e:\\LDat\\dev\\Dt\\42\\BILL.cpp","tests":[{"id":1672318405471,"input":"6 6\n10 3\n2 8\n2 6\n1 1\n6 3\n10 2\n","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\42\\BILL.cpp","group":"local","local":true}

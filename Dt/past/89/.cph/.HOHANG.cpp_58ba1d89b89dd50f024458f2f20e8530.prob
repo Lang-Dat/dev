@@ -1,1 +1,0 @@
-{"name":"Local: HOHANG","url":"e:\\LDat\\dev\\Dt\\89\\HOHANG.cpp","tests":[{"id":1667703836257,"input":"2\n3\nABC\nBCA\n4\nXNYZ\nYNYZ","output":"1\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\89\\HOHANG.cpp","group":"local","local":true}

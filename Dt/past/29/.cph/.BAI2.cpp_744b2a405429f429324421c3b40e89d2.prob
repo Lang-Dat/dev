@@ -1,1 +1,0 @@
-{"name":"Local: BAI2","url":"e:\\LDat\\dev\\Dt\\29\\BAI2.cpp","tests":[{"id":1671326349039,"input":"9\n110100111","output":"10"},{"id":1671326358950,"input":"1\n1","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\29\\BAI2.cpp","group":"local","local":true}

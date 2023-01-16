@@ -1,1 +1,0 @@
-{"name":"Local: SDB","url":"e:\\code\\dev\\Dt\\47\\SDB.cpp","tests":[{"id":1672794140699,"input":"8\n9 9 7 7 6 11 9 5","output":"3\n6\n11\n5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\dev\\Dt\\47\\SDB.cpp","group":"local","local":true}

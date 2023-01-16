@@ -1,1 +1,0 @@
-{"name":"Local: sum","url":"e:\\code\\dev\\Dt\\93\\sum.cpp","tests":[{"id":1667810095894,"input":"3 7 5\n2\n3 \n6 \n","output":"25"},{"id":1667810111881,"input":"3 2 1\n2\n3 \n6 \n","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\dev\\Dt\\93\\sum.cpp","group":"local","local":true}

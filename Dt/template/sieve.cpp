@@ -13,12 +13,12 @@ bool isPrime_(uint64_t n) {
     return true;
 }
 
-static const int LIM = 1e7 + 5;
+static const int LIM_SIEVE = 1e6 + 5;
 uint64_t ONES[64]; // 1 << i
-uint64_t sieve_mark[LIM / 64 + 11];
+uint64_t sieve_mark[LIM_SIEVE / 64 + 11];
 
 inline void mark(int &bit) { sieve_mark[bit / 64] |= ONES[bit & 63]; }
-inline bool is_prime(int &bit) { return (bit != 1 and bit % 2 != 0) and (sieve_mark[bit / 64] & ONES[bit & 63]) == 0 or bit == 2; }
+inline bool is_prime(int bit) { return (bit > 1 and bit % 2 != 0) and (sieve_mark[bit / 64] & ONES[bit & 63]) == 0 or bit == 2; }
 
 void sieve(int n) {
     for (int i = 0; i < 64; i++) ONES[i] = 1ULL << i; // turn bit i on
@@ -30,6 +30,8 @@ void sieve(int n) {
         }
     }
 }
+
+static const int LIM = 1e6 + 5;
 
 int tong_uoc[LIM];
 int so_uoc[LIM]; // so_uoc[i]: number of divisor of i

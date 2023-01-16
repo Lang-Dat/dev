@@ -1,1 +1,0 @@
-{"name":"Local: DNA","url":"e:\\code\\dev\\Dt\\contest4-thpt\\DNA.cpp","tests":[{"id":1671786910094,"input":"4\nABBA","output":"2"},{"id":1671786926737,"input":"12\nAAABBAAABBB","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\dev\\Dt\\contest4-thpt\\DNA.cpp","group":"local","local":true}
