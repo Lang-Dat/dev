@@ -1,0 +1,1 @@
+{"name":"Local: laptrinh","url":"e:\\LDat\\dev\\Dt\\64\\laptrinh.cpp","tests":[{"id":1674696892435,"input":"5\n10 8 12 8 11 \n 4","output":"4\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\64\\laptrinh.cpp","group":"local","local":true}

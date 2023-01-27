@@ -7,9 +7,10 @@
 #include <vector>
 using namespace std;
 
-static const int LIM_VALUE = 1e8,
-                 LIM = 5 * 1e5 + 5; // sub 3
+static const int LIM_VALUE = 1e6,
+                 LIM = 5 * 1e4 + 5; // sub 3
 int nums[LIM], divisors[LIM_VALUE]; // divisors[i]: number of divisor of i
+int dp[LIM]; // LIS
 
 void sieveDivisor() {
     // Time complexity: O(nLog2(n)) (n is LIM_VALUE)
@@ -18,20 +19,6 @@ void sieveDivisor() {
             divisors[j]++;
 }
 
-int lengthOfLIS(int *nums, int n) {
-    static const int INF = INT32_MAX;
-    std::vector<int> dp(n+2, INF); // dp[i]: phần tử nhỏ nhất mà tại đó một dãy con độ dài i kết thúc
-    dp[0] = -INF;
-    for (int i = 0; i < n; i++) {
-        int j = std::upper_bound(dp.begin(), dp.end(), nums[i]) - dp.begin();
-        if (dp[j-1] < nums[i] && nums[i] < dp[j])
-            dp[j] = nums[i];
-    }
-    for (int i = 0; i <= n; i++) {
-        if (dp[i+1] == INF) return i;
-    }
-    return 1;
-}
 
 int main()
 {
@@ -39,8 +26,7 @@ int main()
     std::cin.tie(nullptr);
     #ifndef ONLINE_JUDGE
     freopen("./DAYSODEP.INP", "r", stdin);
-    freopen("./Testde14/DAYSODEP/Test016/DAYSODEP.INP", "r", stdin);
-    // freopen("./DAYSODEP.OUT", "w", stdout);
+    freopen("./DAYSODEP.OUT", "w", stdout);
     #endif
 
     sieveDivisor();   
@@ -53,6 +39,14 @@ int main()
         nums[i] = divisors[tmp];
     }
 
-    cout << lengthOfLIS(nums, n);
+    int best = 0;
+    for (int i = 0; i < n; i++) { // O(n^2)
+        for (int j = 0; j < i; j++)
+            if (nums[i] > nums[j] && dp[j] + 1 > dp[i])
+                dp[i] = dp[j] + 1;
+        best = max(best, dp[i]);
+    }
+    
+    std::cout << best + 1 << "";
     return 0;
 }

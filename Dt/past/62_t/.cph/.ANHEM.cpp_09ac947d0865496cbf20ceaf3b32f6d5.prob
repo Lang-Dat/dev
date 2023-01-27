@@ -1,0 +1,1 @@
+{"name":"Local: ANHEM","url":"e:\\LDat\\dev\\Dt\\62\\ANHEM.cpp","tests":[{"id":1674636827179,"input":"6 25","output":"YES"},{"id":1674636858033,"input":"12 13","output":"NO"},{"id":1674636863346,"input":"1 7","output":"YES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\62\\ANHEM.cpp","group":"local","local":true}
