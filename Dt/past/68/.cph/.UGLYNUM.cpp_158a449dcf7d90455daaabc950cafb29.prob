@@ -1,0 +1,1 @@
+{"name":"Local: UGLYNUM","url":"e:\\LDat\\dev\\Dt\\68\\UGLYNUM.cpp","tests":[{"id":1675173947496,"input":"1","output":"1"},{"id":1675173954318,"input":"9","output":"10"},{"id":1675173960275,"input":"2","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LDat\\dev\\Dt\\68\\UGLYNUM.cpp","group":"local","local":true}
