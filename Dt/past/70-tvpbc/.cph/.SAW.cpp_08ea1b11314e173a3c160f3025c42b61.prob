@@ -1,0 +1,1 @@
+{"name":"Local: SAW","url":"e:\\code\\dev\\Dt\\70\\SAW.cpp","tests":[{"id":1675222033488,"input":"4 2 \n20 15 10 17 \n7 4","output":"15 16"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\code\\dev\\Dt\\70\\SAW.cpp","group":"local","local":true}
