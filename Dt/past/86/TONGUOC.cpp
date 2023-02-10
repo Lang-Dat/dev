@@ -22,7 +22,7 @@ int main() {
     std::cin >> a >> b;
 
     if (b % 3 == 0) {
-        std::cout << tong_uoc(std::__gcd(a, b));
+        std::cout << tong_uoc(std::__gcd(a, b / 3));
     } else {
         std::cout << 0;
     }
